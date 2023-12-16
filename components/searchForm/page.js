@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useDrag, useDrop, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
+import { setData } from "@/redux/tollSlice";
 
 const CustomTextFiled = ({ id, text, index, moveTextField, onTextChange }) => {
   const [, ref] = useDrag({
@@ -42,6 +44,8 @@ function SearchForm() {
     { id: 2, text: "Text Field 2" },
   ]);
   const [formData, setFormData] = useState([]);
+
+  const dispatch = useDispatch();
 
   const router = useRouter();
 

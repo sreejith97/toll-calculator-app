@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+// import { store } from "../redux/store";
+// import { Provider } from "react-redux";
 
 export default function Home() {
   return (
