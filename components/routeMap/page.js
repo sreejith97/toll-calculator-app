@@ -59,10 +59,11 @@ function Map({ polyline }) {
   //   console.log(destinations);
   const path = decode(encoded, 5);
   return (
-    <div>
+    <div className="rounded-xl">
       <MapContainer
         center={destinations[0].position}
         zoom={13}
+        className="rounded-xl"
         style={{ height: "500px", width: "100%" }}
       >
         <TileLayer

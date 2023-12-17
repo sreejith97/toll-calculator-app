@@ -47,7 +47,7 @@ function OptionalSearchFields({ optionalFormData, setOptionalFormData }) {
 
   return (
     <>
-      <div className="border-l-2 w-1/2  p-4">
+      <div className="md:border-l-2 w-full md:w-1/2  p-4">
         <div className="w-full ">
           <h1 className="items-center text-center text-[16px] uppercase font-bold">
             Optional Info

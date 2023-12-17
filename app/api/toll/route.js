@@ -14,7 +14,7 @@ export const POST = async (req) => {
       body: JSON.stringify(requestedData),
       headers: {
         "content-type": "application/json",
-        "x-api-key": "PnRTJrqPF2Nhh6Pj3Tm4t9DP7dNBLp9q  ",
+        "x-api-key": "Jj8P4rtfJg2dQN4nB7FfTqtgp8b4LqRG  ",
       },
     }
   );

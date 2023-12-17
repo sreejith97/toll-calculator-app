@@ -40,17 +40,17 @@ const CustomTextFiled = ({
       >
         <input
           type="text"
-          placeholder={text}
+          placeholder={"Place, Country"}
           onChange={(e) => onTextChange(index, e.target.value)}
           className="w-full bg-transparent border-none focus:outline-none"
         />
-        {isDeletable ? (
+        {/* {isDeletable ? (
           <div onClick={() => removeOptionalTextField(textFields[index])}>
             s
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </div>
     </div>
   );
@@ -58,8 +58,8 @@ const CustomTextFiled = ({
 
 function SearchForm() {
   const [textFields, setTextFields] = useState([
-    { id: 1, text: "Trivandrum, India" },
-    { id: 2, text: "thrissur,India" },
+    { id: 1, text: "Trivandrum" },
+    { id: 2, text: "Kochi" },
   ]);
   const [optionalFormData, setOptionalFormData] = useState({
     vehicleType: "2AxlesAuto",
@@ -155,10 +155,10 @@ function SearchForm() {
 
   return (
     <div>
-      <div className="flex flex-row w-full">
-        <div className="w-1/2">
+      <div className="flex flex-col md:flex-row w-full">
+        <div className="w-full md:w-1/2">
           <DndProvider backend={HTML5Backend}>
-            <div className="w-[90%] flex flex-col items-center justify-center">
+            <div className="md:w-[90%] flex flex-col items-center justify-center">
               <div className="w-full my-8">
                 {textFields.map((textField, index) => (
                   <CustomTextFiled
@@ -187,18 +187,18 @@ function SearchForm() {
                 {" "}
                 <button
                   onClick={addOptionalTextField}
-                  className="bg-blue-500 text-white py-2 px-4 rounded-md mr-2"
+                  className="bg-blue-500 text-white py-1 px-4 rounded-md mr-2"
                 >
-                  Add Optional Field
+                  Add Field
                 </button>
                 {textFields.length > 2 && (
                   <button
                     onClick={() =>
                       removeOptionalTextField(textFields.length - 1)
                     }
-                    className="bg-red-500 text-white py-2 px-4 rounded-md"
+                    className="bg-red-500 text-white py-1 px-4 rounded-md"
                   >
-                    Remove Optional Field
+                    Remove Field
                   </button>
                 )}
               </div>
@@ -213,7 +213,14 @@ function SearchForm() {
       <div className="w-full flex items-center justify-center">
         <button
           onClick={handleSubmit}
-          className="mt-4 bg-green-500 text-white py-2 px-4 rounded-md"
+          disabled={
+            textFields[0].text == "" || textFields[1].text == "" ? true : false
+          }
+          className={`mt-4 text-white py-2 px-4 rounded-md ${
+            textFields[0].text == "" || textFields[1].text == ""
+              ? "bg-slate-300"
+              : "bg-green-500"
+          }`}
         >
           Search
         </button>
