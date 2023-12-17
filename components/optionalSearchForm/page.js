@@ -7,16 +7,7 @@ function OptionalSearchFields({ optionalFormData, setOptionalFormData }) {
       Description: "Car, Jeep, Van, SUV",
       vehicleType: "2AxlesAuto",
     },
-    {
-      id: 2,
-      Description: "Car, SUV towing 1-axle trailer",
-      vehicleType: "3AxlesAuto",
-    },
-    {
-      id: 3,
-      Description: "Car, SUV towing 2-axle trailer",
-      vehicleType: "4AxlesAuto",
-    },
+
     {
       id: 4,
       Description: "Taxi",
