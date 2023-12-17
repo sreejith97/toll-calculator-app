@@ -5,7 +5,7 @@ import { useDrag, useDrop, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { setData } from "@/redux/tollSlice";
+import { setData, setLoading } from "@/redux/tollSlice";
 import OptionalSearchFields from "../optionalSearchForm/page";
 
 const CustomTextFiled = ({
@@ -67,6 +67,8 @@ function SearchForm() {
     departureTime: Math.floor(new Date().getTime() / 1000),
   });
 
+  const isLoading = useSelector((state) => state.toll.isLoading);
+
   const dispatch = useDispatch();
 
   const router = useRouter();
@@ -95,6 +97,8 @@ function SearchForm() {
   };
 
   const handleSubmit = async () => {
+    dispatch(setLoading(true));
+
     fetch("/api/toll", {
       method: "POST",
       body: JSON.stringify({
@@ -135,11 +139,13 @@ function SearchForm() {
       })
       .then((data) => {
         dispatch(setData({ message: "Hello sucessfullss", data }));
-        // setLoading(false);
+        setTimeout(() => {
+          dispatch(setLoading(false));
+        }, 3000);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        // setLoading(false);
+        dispatch(setLoading(false));
       });
 
     // router.push("/dashboard/TollDetails");

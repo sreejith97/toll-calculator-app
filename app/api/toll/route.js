@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
   const requestedData = await req.json();
-  console.log(requestedData);
+  // console.log(requestedData);
 
   // const fromDestination = requestedData.from.address;
   // console.log(fromDestination);
@@ -14,7 +14,7 @@ export const POST = async (req) => {
       body: JSON.stringify(requestedData),
       headers: {
         "content-type": "application/json",
-        "x-api-key": "fPBqTtBpdqG8BHHh2LDtmpb8NHQBpnGd ",
+        "x-api-key": "PnRTJrqPF2Nhh6Pj3Tm4t9DP7dNBLp9q  ",
       },
     }
   );
