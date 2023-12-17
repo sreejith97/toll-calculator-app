@@ -4,7 +4,7 @@ import DetailsModal from "../detailsModal/page";
 
 function TollDetailsTable({ data }) {
   // console.log(data.summary.currency);
-  console.log(data);
+  // console.log(data);
 
   const tollLocations = data.routes[0].tolls.map((toll) => ({
     label: toll.name,

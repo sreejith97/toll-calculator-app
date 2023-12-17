@@ -33,7 +33,9 @@ const CustomTextFiled = ({
 
   return (
     <div>
-      <label htmlFor="">{text}</label>
+      <label htmlFor="" className=" uppercase font-bold my-1">
+        {text}
+      </label>
       <div
         ref={(node) => ref(drop(node))}
         className="bg-gray-100 border p-4 mb-4 rounded-md flex flex-row"
