@@ -16,8 +16,8 @@ function LandingPage() {
           essential. Our toll calculator app offers a comprehensive solution,
           allowing you to plan your routes with precision, consider toll costs,
           estimate fuel expenses, calculate travel time, and visualize your
-          route on an interactive map. Let's delve into the features that make
-          our app a must-have for every traveler.
+          route on an interactive map. Let&apos;s delve into the features that
+          make our app a must-have for every traveler.
         </p>
         <br />
         <p className="text-justify md:text-center">
