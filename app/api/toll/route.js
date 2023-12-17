@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
   const requestedData = await req.json();
+  console.log(requestedData);
 
   // const fromDestination = requestedData.from.address;
   // console.log(fromDestination);
