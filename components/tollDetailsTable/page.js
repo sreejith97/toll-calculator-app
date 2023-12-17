@@ -61,8 +61,8 @@ function TollDetailsTable({ data }) {
               </tr>
             </thead>
             <tbody>
-              {tollLocations.map((location) => (
-                <tr key={location} className="border-b hover:bg-gray-50">
+              {tollLocations.map((location, index) => (
+                <tr key={index} className="border-b hover:bg-gray-50">
                   <td className="p-4">{`${location.label}`}</td>
                   <td className="p-4 ">{`${location.tag} ${data.summary.currency}`}</td>
                   <td className="p-4 ">{`${location.cash} ${data.summary.currency}`}</td>

@@ -70,8 +70,8 @@ function OptionalSearchFields({ optionalFormData, setOptionalFormData }) {
               <option value="" disabled>
                 Select your Car type
               </option>
-              {vehicleTypeOptions.map((vehicle) => (
-                <option key={vehicle} value={vehicle.vehicleType}>
+              {vehicleTypeOptions.map((vehicle, index) => (
+                <option key={index} value={vehicle.vehicleType}>
                   {vehicle.Description}
                 </option>
               ))}
@@ -93,8 +93,8 @@ function OptionalSearchFields({ optionalFormData, setOptionalFormData }) {
               <option value="" disabled>
                 Select a year (1999 or later)
               </option>
-              {years.map((year) => (
-                <option key={year} value={year}>
+              {years.map((year, index) => (
+                <option key={index} value={year}>
                   {year}
                 </option>
               ))}
