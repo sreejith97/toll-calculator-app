@@ -10,7 +10,7 @@ const tollSlice = createSlice({
   initialState,
   reducers: {
     setData: (state, action) => {
-      console.log(action);
+      // console.log(action);
       state.value = action.payload;
     },
     setLoading: (state, action) => {

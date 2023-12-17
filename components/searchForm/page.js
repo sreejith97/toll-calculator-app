@@ -69,11 +69,7 @@ function SearchForm() {
     departureTime: Math.floor(new Date().getTime() / 1000),
   });
 
-  const isLoading = useSelector((state) => state.toll.isLoading);
-
   const dispatch = useDispatch();
-
-  const router = useRouter();
 
   const moveTextField = (fromIndex, toIndex) => {
     const updatedTextFields = [...textFields];
@@ -149,8 +145,6 @@ function SearchForm() {
         console.error("Error fetching data:", error);
         dispatch(setLoading(false));
       });
-
-    // router.push("/dashboard/TollDetails");
   };
 
   const [isOpen, setIsOpen] = useState(false);
@@ -166,7 +160,6 @@ function SearchForm() {
                   <CustomTextFiled
                     key={textField.id}
                     id={textField.id}
-                    // text={textField.text}
                     text={
                       index === textFields.length - 1
                         ? "Destination"
