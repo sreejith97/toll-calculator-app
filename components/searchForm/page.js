@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setData, setLoading } from "@/redux/tollSlice";
 import OptionalSearchFields from "../optionalSearchForm/page";
+import ErrorModal from "../errorModal/page";
 
 const CustomTextFiled = ({
   id,
@@ -67,6 +68,9 @@ function SearchForm() {
     vehicleType: "2AxlesAuto",
     carModel: 2023,
     departureTime: Math.floor(new Date().getTime() / 1000),
+  });
+  const [apiError, setApiError] = useState({
+    error: "",
   });
 
   const dispatch = useDispatch();
@@ -133,6 +137,7 @@ function SearchForm() {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
+
         return res.json();
       })
       .then((data) => {
@@ -144,10 +149,24 @@ function SearchForm() {
       .catch((error) => {
         console.error("Error fetching data:", error);
         dispatch(setLoading(false));
+        setApiError({
+          error:
+            "The 'Origin' and 'Destination' locations cannot be empty / invalid ",
+        });
+        openModal();
       });
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setApiError({});
+  };
 
   return (
     <div>
@@ -219,6 +238,18 @@ function SearchForm() {
         >
           Search
         </button>
+      </div>
+
+      <div>
+        <ErrorModal isOpen={isModalOpen} onClose={closeModal}>
+          {apiError && <h1>{apiError.error}</h1>}
+          <button
+            onClick={closeModal}
+            className="mt-4 text-white py-2 px-4 rounded-md bg-red-400"
+          >
+            Close
+          </button>
+        </ErrorModal>
       </div>
     </div>
   );

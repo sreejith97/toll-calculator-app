@@ -21,6 +21,10 @@ export const POST = async (req) => {
 
   if (!res.ok) {
     throw new Error(`HTTP error! Status: ${res.status}`);
+    return NextResponse.json({
+      status: res.status,
+      error: res.value,
+    });
   }
 
   // console.log(await res.json());
@@ -30,5 +34,7 @@ export const POST = async (req) => {
   return NextResponse.json({
     sucess: "POST Request",
     data: data,
+    status: res.status,
+    error: res.error,
   });
 };

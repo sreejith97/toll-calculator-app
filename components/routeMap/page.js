@@ -54,7 +54,7 @@ function Map({ polyline }) {
   //       ]);
   //     }
   //   }, [polyline]);
-  console.log(tollLocations);
+  // console.log(tollLocations);
 
   //   console.log(destinations);
   const path = decode(encoded, 5);

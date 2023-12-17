@@ -74,7 +74,7 @@ function TollDetailsTable({ data }) {
             onClick={closeModal}
             className="mt-4 text-white py-2 px-4 rounded-md bg-red-400"
           >
-            Close Modal
+            Close
           </button>
         </DetailsModal>
       </div>
