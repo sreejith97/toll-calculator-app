@@ -60,8 +60,8 @@ const CustomTextFiled = ({
 
 function SearchForm() {
   const [textFields, setTextFields] = useState([
-    { id: 1, text: "Trivandrum" },
-    { id: 2, text: "Kochi" },
+    { id: 1, text: "" },
+    { id: 2, text: "" },
   ]);
   const [optionalFormData, setOptionalFormData] = useState({
     vehicleType: "2AxlesAuto",

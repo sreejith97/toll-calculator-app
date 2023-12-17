@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Toll Expert
 
-## Getting Started
 
-First, run the development server:
+Our toll calculator app is a vital tool for travelers, providing precise route planning with toll costs, fuel expenses, and travel time estimation. Unique features include support for waypoints, enabling users to add stops for dynamic adjustments in tolls, fuel estimates, and travel time. Unlike traditional calculators, our app offers a comprehensive and personalized planning experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+
+## Features
+
+- Providing precise route planning with toll costs
+- Total fuel expenses
+- Enabling users to add stops for dynamic adjustments in tolls
+
+
+
+
+## Tech
+Toll Expert relies on several open-source projects to function:
+
+- [Nextjs] - HTML enhanced for web apps!
+- [nodejs] - Node.js serves as the runtime for executing server-side JavaScript
+- [Toll guru API] - The TollGuru API is a service offering toll-related information and functionalities
+- [Google Polyline-codec] - Encode and decode polyines in Nodejs or the browser using this package
+- [TailWind css] - Utility-first CSS framework
+
+
+## Installation
+
+Toll Expert requires [Node.js](https://nodejs.org/) v18+ to run.
+
+Clone the project by retrieving it from my repository [toll-calculator-app].
+
+```sh
+git clone https://github.com/sreejith97/toll-calculator-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install the dependencies and devDependencies.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+cd toll-calculator-app
+npm i
+```
+Create a ".env.local" file to store the credentials and API key(get API_KEY from Toll GURU )
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+API_KEY="YOUR_API_KEY"
+```
+Start the server using npm or yarn.
 
-## Learn More
+```sh
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Server will start running at local port 3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+http://localhost:3000/
+```
+## Live Demo
+The project is live and hosted on Vercel. (Note: There is a potential for non-functionality due to the project relying on a free API with daily usage limitations.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+```sh
+https://toll-expert-c33ax1d0o-sreejiths-projects-693d5246.vercel.app/
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT
+
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [Nextjs]: <https://nextjs.org/>
+   [nodejs]: <https://nodejs.org/en>
+   [Toll Guru API]: <https://tollguru.com/>
+   [Google Polyline-codec]: <https://www.npmjs.com/package/@googlemaps/polyline-codec>
+   [Tailwind css]: <https://tailwindcss.com/>
+   [toll-calculator-app]: <https://github.com/sreejith97/toll-calculator-app>
+   
+
