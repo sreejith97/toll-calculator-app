@@ -11,7 +11,7 @@ function DetailsModal({ isOpen, onClose, children, data }) {
         className="fixed inset-0 bg-black opacity-50"
         onClick={onClose}
       ></div>
-      <div className="bg-white p-8 mx-[100px] min-h-[400px] w-full rounded-lg z-10 flex flex-col justify-between items-center">
+      <div className="bg-white p-8  mx-[100px] min-h-[400px] w-full rounded-lg z-10 flex flex-col justify-between items-center">
         {children}
       </div>
     </div>

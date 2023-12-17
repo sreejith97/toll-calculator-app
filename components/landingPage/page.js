@@ -8,10 +8,10 @@ function LandingPage() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="heading">
-        <h1 className="sm:text-[30px] lg:text-[40px] font-bold text-center my-9">
+        <h1 className="text-[30px] md:text-[40px] font-bold text-center my-9">
           Welcome to Toll expert
         </h1>
-        <p className="text-center">
+        <p className="text-justify md:text-center">
           In the ever-evolving landscape of travel, optimizing your journey is
           essential. Our toll calculator app offers a comprehensive solution,
           allowing you to plan your routes with precision, consider toll costs,
@@ -20,7 +20,7 @@ function LandingPage() {
           our app a must-have for every traveler.
         </p>
         <br />
-        <p className="text-center">
+        <p className="text-justify md:text-center">
           Unlike traditional toll calculators, our app supports waypoints.
           Easily add stops along your route, and the app will dynamically adjust
           toll costs, fuel estimates, and travel time, ensuring accurate and

@@ -159,7 +159,7 @@ function SearchForm() {
         <div className="w-full md:w-1/2">
           <DndProvider backend={HTML5Backend}>
             <div className="md:w-[90%] flex flex-col items-center justify-center">
-              <div className="w-full my-8">
+              <div className="w-full my-4 md:my-8">
                 {textFields.map((textField, index) => (
                   <CustomTextFiled
                     key={textField.id}
